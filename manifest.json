@@ -1,0 +1,38 @@
+{
+    "name": "DefFind",
+    "manifest_version": 3,
+    "description": "Find Definition of selected words",
+    "action": {
+        "default_icon": {
+            "16": "icons/16.png",
+            "24": "icons/24.png",
+            "32": "icons/32.png"
+        },
+        "default_popup": "popup.html"
+    },
+    "version": "1.2",
+    "content_scripts": [{
+        "matches": [
+            "<all_urls>"
+        ],
+        "js": [
+            "content.js"
+        ]
+    }],
+    "background": {
+        "service_worker": "background.js"
+    },
+    "permissions": [
+        "nativeMessaging",
+        "tabs"
+    ],
+    "icons": {
+        "128": "icons/128.png",
+        "16": "icons/16.png",
+        "256": "icons/256.png",
+        "48": "icons/48.png"
+    },
+    "host_permissions": [
+        "<all_urls>"
+    ]
+}
